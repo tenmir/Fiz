@@ -1,6 +1,6 @@
 extends Control
 
-var enemy_scene: PackedScene = preload("res://enemy.tscn")
+var enemy_scene: PackedScene = preload("res://scenes/enemy.tscn")
 @export var spawn_interval: float = 3.0
 @export var max_enemies: int = 10  # Ограничение на общее количество врагов
 
