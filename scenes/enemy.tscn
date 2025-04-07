@@ -1,23 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://brl1exwt8rw5n"]
+[gd_scene load_steps=4 format=3 uid="uid://brl1exwt8rw5n"]
 
-[ext_resource type="Script" uid="uid://bhwj801rj3nll" path="res://scripts/enemy_movement.gd" id="1_md0e3"]
+[ext_resource type="Script" uid="uid://cuwoonj3rs8sk" path="res://scripts/melee_enemy.gd" id="1_md0e3"]
 [ext_resource type="Texture2D" uid="uid://bu1joe7tqomcq" path="res://assets/2550b39803d5d892ebda26155c19950a.png" id="2_4ra3w"]
-
-[sub_resource type="GDScript" id="GDScript_4gyqm"]
-resource_local_to_scene = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iifgy"]
 size = Vector2(34, 41)
 
-[node name="Node2D" type="Node2D"]
-script = SubResource("GDScript_4gyqm")
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_md0e3")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.01, 0.01)
 texture = ExtResource("2_4ra3w")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_iifgy")

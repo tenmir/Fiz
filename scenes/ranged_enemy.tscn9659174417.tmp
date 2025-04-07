@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://btl5cecsrp5nl"]
+
+[ext_resource type="Script" uid="uid://nbu3jiuo1spg" path="res://scripts/ranged_enemy.tres.gd" id="1_rs3ab"]
+[ext_resource type="Texture2D" uid="uid://op4iwi3h2can" path="res://assets/b6e503a6ceeb9c400c3e26546b8c265f.png" id="1_u2kgh"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_rs3ab")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_u2kgh")

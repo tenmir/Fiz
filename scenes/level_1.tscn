@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://nir3qrxx54g4"]
+[gd_scene load_steps=5 format=3 uid="uid://nir3qrxx54g4"]
 
 [ext_resource type="PackedScene" uid="uid://dh0unmb75sdyd" path="res://scenes/player.tscn" id="1_014kd"]
 [ext_resource type="Script" uid="uid://gtodgxsx085h" path="res://scripts/spawn_enemy.gd" id="1_rus8k"]
+[ext_resource type="PackedScene" uid="uid://brl1exwt8rw5n" path="res://scenes/enemy.tscn" id="3_5xbjy"]
+[ext_resource type="PackedScene" uid="uid://btl5cecsrp5nl" path="res://scenes/ranged_enemy.tscn" id="4_4nkto"]
 
 [node name="Level1" type="Control"]
 layout_mode = 3
@@ -17,6 +19,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -53.135
+offset_right = -53.135
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -37,3 +41,10 @@ text = "level 1"
 
 [node name="player" parent="." instance=ExtResource("1_014kd")]
 position = Vector2(521, 323)
+
+[node name="enemies" type="Control" parent="."]
+anchors_preset = 0
+
+[node name="enemy" parent="enemies" instance=ExtResource("3_5xbjy")]
+
+[node name="ranged_enemy" parent="enemies" instance=ExtResource("4_4nkto")]

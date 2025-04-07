@@ -21,3 +21,5 @@ shape = SubResource("RectangleShape2D_onrkg")
 scale = Vector2(1.05303, 0.992188)
 texture = ExtResource("2_i3pqv")
 hframes = 9
+
+[node name="DetectionArea" type="Area2D" parent="."]
